@@ -1,0 +1,59 @@
+#include<stdio.h>
+void up_pattern(int n);
+void down_pattern(int n);
+void upside_pattern(int n);
+void main()
+{
+    int n,k;
+
+    printf("enter which pattern u want 1.up 2.down 3.upside pattern");
+    scanf("%d",&k);
+    printf("enter n");
+    scanf("%d",&n);
+    if(k==1)
+        up_pattern(n);
+        else if(k==2)
+            down_pattern(n);
+        else
+            upside_pattern(n);
+}
+void up_pattern(int n)
+{
+    int i,j,space,m;
+    space=n;
+    for(i=0;i<n;i++)
+    {
+        for(m=0;m<space;m++)
+            printf(" ");
+            space--;
+            for(j=0;j<2*i+1;j++)
+            printf("*");
+            printf("\n");
+        }
+
+    }
+    void down_pattern(int n)
+    {
+int i,j=0,space=0,m=0,u=0;
+
+    for(i=n;i>0;i--)
+    {
+space=n-i;
+m=space;
+while(m>0)
+{
+    printf(" ");
+    m--;
+}
+for(j=2*i-1;j>0;j--)
+{
+    printf("*");
+}
+printf("\n");
+    }
+    }
+void upside_pattern(int n)
+{
+
+
+}

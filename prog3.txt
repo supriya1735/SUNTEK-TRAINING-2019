@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<string.h>
+int i,j,n=0;
+struct student
+{
+char name[10];
+int id;
+int marks;
+}s[100];
+void add(struct student []);
+void view(struct student []);
+
+int main (void)
+{
+//struct student *s[100]=(struct student*)malloc(sizeof(struct student));
+int k;
+printf("\n enter 1 to add student detailsor enter 2 to view student details");
+scanf("%d",&k);
+if(k==1)
+add(s);
+else if(k==2)
+    view(s);
+else
+    printf("\ninvalid option");
+return 0;
+}
+
+void add(struct student s[100])
+{
+    int k;
+    printf("\n enter no. of students to be added");
+    scanf("%d",&k);
+    for(i=n;i<n+k;i++)
+    {
+    printf("\n enter name  ");
+    scanf("%s",&s[i].name);
+    printf("\n enter id  ");
+    scanf("%d",&s[i].id);
+    printf("\n enter marks  ");
+    scanf("%d",&s[i].marks);
+    }
+    n=n+k;
+    //view(s);
+    main();
+}
+void view(struct student s[100])
+{
+    printf("\n Name \t ID \t Marks ");
+   for(i=0;i<n;i++)
+   {
+       printf("\n %s\t%d\t%d",s[i].name,s[i].id,s[i].marks);
+
+   }
+main();
+}
+
+ 
